@@ -4,6 +4,7 @@ require 'time'
 class Schedule < ApplicationRecord
   belongs_to :coach
   belongs_to :student, optional: true
+  has_one :call
 
   validates :slot_start, presence: true, uniqueness: true
   validates :slot_end, presence: true, uniqueness: true
@@ -17,7 +18,7 @@ class Schedule < ApplicationRecord
   end
 
   def time_end_not_greater_than_2_hours
-    time_diff = Time.parse(self.slot_end.to_s) - Time.parse(self.slot_start.to_s)
+    time_diff = Time.parse(slot_end.to_s) - Time.parse(slot_start.to_s)
     if time_diff / 3600 > 2.0
       errors.add(:slot_end, "can't be greater than 2 hours")
     end
