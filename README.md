@@ -20,5 +20,5 @@ Coaches should be able to review their past scores and notes for all of their ca
 
 * System dependencies
 React
-Rails
-Rspec
+Rails 7
+Rspec Rails https://github.com/rspec/rspec-rails

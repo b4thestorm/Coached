@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coach: one
+  student: one
+  slot: 2025-03-06 19:26:58
+
+two:
+  coach: two
+  student: two
+  slot: 2025-03-06 19:26:58
